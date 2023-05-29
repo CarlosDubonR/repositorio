@@ -2,12 +2,12 @@
 <html>
 
 <head>
+
     <title>RFID en seguridad</title>
 </head>
-
 <body>
     <h1>RFID (radio frecuancia id)</h1>
-    <p id = "PrimerReporte"> 
+    <p > 
         primer reporte de proyecto y prueba de los diversos comandos <br>
         en HTML con un poco de 
         <span style="color:royalblue">css</span> 
@@ -23,11 +23,13 @@
     <!-- Aplicando un CSS con id, por buena practica solo se usa una vez en la pagina-->
     <style>
         #objetivo{
-            background: chartreuse;
+            background: chartreuse ;
+            border: 1px solid #000;
+
         }
     </style>
     <h2>Historia</h2>
-    <p class = "historia">
+    <p class = "historia" >
         los sistemas RFID son usados para comtrolar y manejar cantidades masivas de datos <br>
         con una alta versatilidad debido a su facil manejo e instalacion, fueron usados en <br>
         la segunda guerra mundial para detectar naves aliadas pero ahora las posibilidades son <br>
@@ -36,18 +38,36 @@
     <!-- usando class para asignar caracteristicas de css-->
     <style>
         .historia{
-            background: yellow;
-            
+            background: yellow ;
         }
     </style>
     <a href="https://www.youtube.com/watch?v=66XNRc_74P4" target = "_blank" >explicacion sobre RFID </a>
+    <!--Componentes y descripcion breve-->
     <h2>Plicaciones de esta tecnologia</h2>
     <p>
         <b>Emisor de radio frecuencia</b> <br>
-        aqui iria una breve descripcion de las cosas que esto hace, sus tipos, como funciona ademas de <br>
-        las ventajas y desventajas de cada frecuencia y modelo de modulo <br>
-        <img src="imagenes/emisorRFID.jpg" alt="emisor RfiD para arduino" title="EmisorRFID">
+        El lector de RFID RC522 utiliza el bus de interfaz periférico Serial (SPI) <br>
+        para comunicarse con controladores tales como Arduino, Raspberry Pi, etc. <br>
+        El MFRC522 es un lector altamente integrado para la comunicación sin contacto <br>
+        a 13,56 MHz. El lector MFRC522 soporta ISO 14443A / modo de MIFARE. <br> 
+        La señal enviada puede hacer lecturas a corta distancia facilitando la gestion<br>
+        de grandes volumenes de informacion que entran y salen. <br>
+        <img src="imagenes/emisorRFID.jpg" width="300" alt="emisor RfiD para arduino" title="EmisorRFID"> <br>
+        <b>Receptor de radio frecuencia</b> <br>
+        viene en presentaciones variadas ya sea: 
+        <!--lista de Receptores-->
+            <ul>
+                <li><b>etiquetas: </b>utiles para manejar inventarios ya que no afecta el <br>
+                 flujo de trabajo habitual de los operadores y no modifica la infraestructura.  </li><br>
+                <li><b>tarjetas: </b> alplicables para los estudiantes dentro de la UNAH. </li><br>
+                <li> <b>llaveros: </b> esta presentacion podria ser util para personas que en carro <br>
+                pues podriamos saber quien lleva el carro, pero no le daremos amplio enfasis a este modelo. </li> <br>
+            </ul>
+        <img src="imagenes/ModelosReceptor.jpg" width="450" alt="Modelos de Receptores RFID" title="Modelos Receptores RFID (tarjeta, etiqueta, llavero)">
     </p>
-    
+    <!--Base de la pagina-->
+    <footer>
+        <a href="mailto:cdubonr@unah.hn">correo del diseñador (Carlos Dubon)</a>
+    </footer>
 </body>
 </html>

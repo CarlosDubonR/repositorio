@@ -2,8 +2,8 @@
 <html>
 
 <head>
-
     <title>RFID en seguridad</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <h1>RFID (radio frecuancia id)</h1>
@@ -13,37 +13,23 @@
         <span style="color:royalblue">css</span> 
         usando <b>id , class.</b>
     </p >
-    <h2>Objetivos</h2>
+    <h2 class="Obj">Objetivos</h2>
      <p id = "objetivo">
          Desarrollar un sistema de acceso y deteccion de estudiantes dentro <br>
          de la UNAH para salvaguardar la seguridad dentro del campus limitando la entrada <br>
          exclusivamente a los estudiantes y personas con autorizacion.
     </p>
-
-    <!-- Aplicando un CSS con id, por buena practica solo se usa una vez en la pagina-->
-    <style>
-        #objetivo{
-            background: chartreuse ;
-            border: 1px solid #000;
-
-        }
-    </style>
-    <h2>Historia</h2>
+    <h2 class="His">Historia</h2>
     <p class = "historia" >
         los sistemas RFID son usados para comtrolar y manejar cantidades masivas de datos <br>
         con una alta versatilidad debido a su facil manejo e instalacion, fueron usados en <br>
         la segunda guerra mundial para detectar naves aliadas pero ahora las posibilidades son <br>
         infinitas llegando a las empresas logisticas y financiera como una gran herramienta.
     </p>
-    <!-- usando class para asignar caracteristicas de css-->
-    <style>
-        .historia{
-            background: yellow ;
-        }
-    </style>
+    
     <a href="https://www.youtube.com/watch?v=66XNRc_74P4" target = "_blank" >explicacion sobre RFID </a>
     <!--Componentes y descripcion breve-->
-    <h2>Plicaciones de esta tecnologia</h2>
+    <h2 >Plicaciones de esta tecnologia</h2>
     <p>
         <b>Emisor de radio frecuencia</b> <br>
         El lector de RFID RC522 utiliza el bus de interfaz periférico Serial (SPI) <br>
@@ -63,9 +49,13 @@
                 <li> <b>llaveros: </b> esta presentacion podria ser util para personas que en carro <br>
                 pues podriamos saber quien lleva el carro, pero no le daremos amplio enfasis a este modelo. </li> <br>
             </ul>
-        <img src="imagenes/ModelosReceptor.jpg" width="450" alt="Modelos de Receptores RFID" title="Modelos Receptores RFID (tarjeta, etiqueta, llavero)">
+        <img class= "ModRecep" src="imagenes/ModelosReceptor.jpg" width="450" alt="Modelos de Receptores RFID" title="Modelos Receptores RFID (tarjeta, etiqueta, llavero)">
     </p>
+
     <!--Base de la pagina-->
+    <a href="Monitoreo.html" >
+        <button class = "Dirigir"> ir a sistema</button>
+    </a>
     <footer>
         <a href="mailto:cdubonr@unah.hn">correo del diseñador (Carlos Dubon)</a>
     </footer>

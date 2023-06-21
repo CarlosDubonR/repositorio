@@ -9,25 +9,29 @@
     <script src="funciones.js"></script>
 </head>
 <body>
+  
     <h1>sistema de monitoreo UNAH</h1>
-     
-    <div class="selector">
-      <select class="Entradas">
-        <option class="Porton" >Porton Principal</option>
-        <option class="Porton" >Porton peatonal</option>
-        <option class="Porton" >Porton Polideportivo</option>
-      </select>
-    </div>
-    <div class="selector">
-      <select class="Entradas Edificios" >
-        <option class="edf" >Edificio D1</option>
-        <option class="edf" >Edificio F1</option>
-        <option class="edf" >Edificio K1</option>
-      </select>
+    
+    
+      <a href="https://codigofacilito.com/articulos/que-es-el-box-model" class="entradas">
+        ir a la pagina
+      </a>
+      <button class="BTN">
+        Edificios
+      </button>
 
-    </div>
+<button class="BTN INT" onclick="abrirModal()">Mostrar ventana</button>
 
-
+<div id="miModal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <p>Aquí va tu contenido de ventana emergente.</p>
+  </div>
+</div>
+      
+    
+  
+  
  
 <!--dejare solo un boton con enlase para poder pensar cual seria la opcion mas viable-->
     <footer>

@@ -8,30 +8,37 @@
     <link rel="stylesheet" href="css/estilos.css">
     <script src="funciones.js"></script>
 </head>
-<body>
+<body >
+  <!-- ---------------------Menu desplegable------------------------- -->
+  <div class="div">
+    <button id="boton" class="BTN" onclick="mostrar()">Mostrar</button>
+    <div id="opciones">
+      <button id="ocultar" onclick="ocultar()">X</button>
+      <ul class="ul">
+        <li class="li"><a href="https://www.youtube.com/watch?v=KJbLiV6Y9sY&t=3s">entrada1</a></li>
+        <li class="li"><button class="btn">entrada 2</button></li>
+        <li class="li"><button class="btn">entrada 3</button></li>
+        <li class="li"><button class="btn">entrada 4</button></li>
+        <li class="li"><button class="btn">entrada 5</button></li>
+    </ul>
+    </div>
+  </div>
+
+
   
-    <h1>sistema de monitoreo UNAH</h1>
-    
-    
-      <a href="https://codigofacilito.com/articulos/que-es-el-box-model" class="entradas">
-        ir a la pagina
-      </a>
-      <button class="BTN">
-        Edificios
-      </button>
-
-<button class="BTN INT" onclick="abrirModal()">Mostrar ventana</button>
-
+<button class="BTN INT" onclick="abrirModal()">Entradas </button>
 <div id="miModal" class="modal">
   <div class="modal-contenido">
     <span class="cerrar" onclick="cerrarModal()">&times;</span>
-    <p>Aquí va tu contenido de ventana emergente.</p>
+    <ul class="ul">
+      <li class="li"><a href="https://www.youtube.com/watch?v=KJbLiV6Y9sY&t=3s">entrada1</a></li>
+      <li class="li"><button class="btn">entrada 2</button></li>
+      <li class="li"><button class="btn">entrada 3</button></li>
+      <li class="li"><button class="btn">entrada 4</button></li>
+      <li class="li"><button class="btn">entrada 5</button></li>
+  </ul>
   </div>
 </div>
-      
-    
-  
-  
  
 <!--dejare solo un boton con enlase para poder pensar cual seria la opcion mas viable-->
     <footer>

@@ -1,6 +1,36 @@
-*{
-    margin: 0px ;
-}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    vertical-align: baseline;
+  }
+  .btn{
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    background-color: transparent;/*elimina el fondo del boton*/
+    display: block;  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px;
+  }
+
+  .btn:hover{
+    background: turquoise;
+  }
+  body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--tipo-principal);
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 h1{
     color: aqua;
     background: black;
@@ -43,6 +73,7 @@ h2{
     width: 90px;
     padding: 30px;
     margin: 40px ;
+    text-align: center;
     border: 2px solid black ;
 }
 .entradas:hover{
@@ -59,9 +90,7 @@ h2{
     background: aquamarine;
 }
 
-
-
-/*--------------------------------------------*/
+/*----------------Ventana modal----------------------------*/
 .modal {
     display: none;
     position: fixed;
@@ -96,3 +125,20 @@ h2{
     cursor: pointer;
   }
   /*--------------------------------------------*/
+/*-------------------Menu desplegable--------------*/
+#opciones{
+    display: none;
+}
+#ocultar{
+    padding: 5px;
+}
+#ocultar:hover{background-color: red;}
+
+.div{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+

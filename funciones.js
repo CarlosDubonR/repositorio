@@ -1,5 +1,15 @@
 function abrirModal() {
-    document.getElementById("miModal").style.display = "block";
+  document.getElementById("miModal").style.display = "block";
+  /*fetch('http://localhost:8080/')
+  .then(response => response.json())
+  .then(data => {
+    // Aquí puedes manipular los datos recibidos del servidor
+    console.log(data);
+  })
+  .catch(error => {
+    // Manejo de errores
+    console.error('Error:', error);
+  });*/
   }
   
   function cerrarModal() {

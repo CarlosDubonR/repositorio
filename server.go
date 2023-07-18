@@ -2,35 +2,25 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
+
 	"net/http"
-	//"log"
-	//"net/http"
-	//"time"
-	//"encoding/json"
+	
 )
 
-/*
-	func sig(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "<h1>siguiente direccion  </h1>")
-	}
-
-	type mensaje struct {
-		msg string
-	}
-
-	func (m mensaje) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, m.msg)
-	}
-*/
 type Prueba struct {
 	Title  string
 	Numero int
-}
-
-type Pruebas []Prueba
+};
+const results = {
+	nombre: 'carlos',
+	apellido: 'dubon'
+  };
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	mux := http.NewServeMux()
+
+	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) { //utiliza un server mux interno
 		prueba := Prueba{"dato en json", 63}
 		json.NewEncoder(w).Encode(prueba)
 		pruebas := Pruebas{
@@ -40,7 +30,11 @@ func main() {
 		}
 		json.NewEncoder(w).Encode(pruebas)
 	})
-	http.ListenAndServe(":8080", nil)
+
+	mux.HandleFunc("/sig", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "<h1>codigo pruebas</h1>")
+	})
+	http.ListenAndServe(":8080", mux)
 	/*	msg := mensaje{msg: "texto desde un handle:  --"}
 		//estatic := http.FileServer(http.Dir("estatico"))
 		mux := http.NewServeMux()

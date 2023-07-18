@@ -1,13 +1,37 @@
+window.addEventListener('DOMContentLoaded',()=>{loadUsers()})
 function abrirModal() {
   document.getElementById("miModal").style.display = "block";
+  const obtenerPokemons = async()=>{
+    try{
+        const res = await fetch('http://localhost:8080/')
+        mode: 'no-cors'
+        const data = await res.json()
+        console.log(data.results)
+        const Nomnbres = data.results.map( poke => poke.name)
+        console.log(Nomnbres)
+    }catch(error){
+        console.log(error)
+    }
+}
+obtenerPokemons()
   /*fetch('http://localhost:8080/')
+
   .then(response => response.json())
   .then(data => {
-    // Aquí puedes manipular los datos recibidos del servidor
-    console.log(data);
+    // Acceder a los datos JSON y mostrarlos en el frontend
+    const container = document.getElementById('datos-container');
+    
+    // Limpiar el contenido existente
+    container.innerHTML = '';
+    
+    // Recorrer los datos y crear elementos HTML para mostrarlos
+    data.forEach(item => {
+      const elemento = document.createElement('p');
+      elemento.textContent = `${item.Title}: ${item.Numero}`;
+      container.appendChild(elemento);
+    });
   })
   .catch(error => {
-    // Manejo de errores
     console.error('Error:', error);
   });*/
   }

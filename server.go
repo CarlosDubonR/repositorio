@@ -3,19 +3,22 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-
 	"net/http"
-	
+
+	"github.com/rs/cors"
 )
 
 type Prueba struct {
 	Title  string
 	Numero int
-};
-const results = {
+}
+
+type Pruebas []Prueba
+
+/*const datos = {
 	nombre: 'carlos',
 	apellido: 'dubon'
-  };
+}*/
 
 func main() {
 	mux := http.NewServeMux()
@@ -34,7 +37,9 @@ func main() {
 	mux.HandleFunc("/sig", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "<h1>codigo pruebas</h1>")
 	})
-	http.ListenAndServe(":8080", mux)
+	handler := cors.Default().Handler(mux)
+	http.ListenAndServe(":8080", handler)
+
 	/*	msg := mensaje{msg: "texto desde un handle:  --"}
 		//estatic := http.FileServer(http.Dir("estatico"))
 		mux := http.NewServeMux()
